@@ -1,4 +1,4 @@
-# ericsson-jenkins-flowdock-notifier
+# enhanced-jenkins-flowdock-notifier
 
 A simple Groovy script which enables Flowdock notifications to be sent from a Jenkins Pipeline.  The current Flowdock notification plugin does not have any Pipeline integration--here is a stopgap.
 

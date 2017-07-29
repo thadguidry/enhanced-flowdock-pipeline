@@ -1,0 +1,25 @@
+A simple Groovy function which enables Flowdock notifications to be sent from a Jenkins Pipeline.
+
+You must declare use of the library somewhere before use:
+
+```library 'enhanced-flowdock-notifier'```
+
+Then, call `enhancedFlowdockNotify` in an appropriate place in your pipeline.  It needs to be a _step_-class block.  There are four arguments:
+
+1. `this` - passes the script object to the notifier function to provide necessary context
+2. API token for Flowdock.  This can be retrieved from your Flowdock profile page
+3. A string containing list of tags (optional).
+4. An parameter indicating whether a chat notification shall be sent for a successful build (SEND_CHAT_FOR_SUCCESS, default), or not (NO_CHAT_FOR_SUCCESS)
+
+For example:
+
+```
+
+pipeline {
+   //...
+   stage('Flowdock Notifier') {
+      library 'enhanced-flowdock-notifier'
+      enhancedFlowdockNotify this,'token', '#test', 'NO_CHAT_FOR_SUCCESS'
+   }
+}
+```

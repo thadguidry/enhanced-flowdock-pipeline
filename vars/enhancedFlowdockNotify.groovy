@@ -61,6 +61,17 @@ def call(script, apiToken, tags = '', sendForSuccess = 'SEND_CHAT_FOR_SUCCESS') 
       Result: <strong>${buildStatus}<strong/><br />
       URL: <a href="${script.env.BUILD_URL}">${script.currentBuild.fullDisplayName}</a><br />"""
 
+    // add Gerrit trigger and branch information if available
+    def GERRIT_REFNAME =  script.env.GERRIT_REFNAME ? script.env.GERRIT_REFNAME : 'none'
+    if (GERRIT_REFNAME != "none") {
+        content += """<br /><strong>Version control:</strong><br />
+            Gerrit trigger: ${script.env.GERRIT_EVENT_TYPE}<br/>
+            Gerrit branch: ${script.env.GERRIT_REFNAME}<br/>
+            Gerrit URL: <a href="${script.env.GERRIT_SCHEME}://${script.env.CI_USER}@${script.env.GERRIT_HOST}:${script.env.GERRIT_PORT}/${script.env.GERRIT_PROJECT}">${script.env.GERRIT_SCHEME}://${script.env.CI_USER}@${script.env.GERRIT_HOST}:${script.env.GERRIT_PORT}/${script.env.GERRIT_PROJECT}<br/>
+            <br/>"""
+      }
+
+
     // build payload
     def payload = JsonOutput.toJson([source : "Jenkins",
                                      project : script.env.JOB_BASE_NAME,

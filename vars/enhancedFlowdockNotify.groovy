@@ -58,7 +58,7 @@ def call(script, apiToken, tags = '', sendForSuccess = 'SEND_CHAT_FOR_SUCCESS') 
     // build message
     def content = """<h3>${script.env.JOB_BASE_NAME}</h3>
       Build: ${script.currentBuild.displayName}<br />
-      Result: <strong>${buildStatus}<strong/><br />
+      Result: <strong>${buildStatus}</strong><br />
       URL: <a href="${script.env.BUILD_URL}">${script.currentBuild.fullDisplayName}</a><br />"""
 
     // add Gerrit trigger and branch information if available

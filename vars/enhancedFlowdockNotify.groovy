@@ -5,7 +5,7 @@ import java.net.URLEncoder
 import hudson.model.Result
 
 
-def call(script, apiToken, tags = '', sendForSuccess = 'SEND_CHAT_FOR_SUCCESS') {
+def call(script, apiToken, tags = '', sendForSuccess = 'NO_CHAT_FOR_SUCCESS') {  //Alternative default: SEND_CHAT_FOR_SUCCESS
 
     tags = tags.replaceAll("\\s","")
 

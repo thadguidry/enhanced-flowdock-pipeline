@@ -12,7 +12,7 @@ The following must be available in your Jenkins installation to use this library
 
 * Pipeline plugins, of course
 * [Pipeline: Shared Groovy Libraries](https://wiki.jenkins-ci.org/display/JENKINS/Pipeline+Shared+Groovy+Libraries+Plugin) plugin
-* [HTTP Reuqest Plugin](https://wiki.jenkins.io/display/JENKINS/HTTP+Request+Plugin ) plugin
+* [HTTP Request Plugin](https://wiki.jenkins.io/display/JENKINS/HTTP+Request+Plugin ) plugin
 * An appropriate source code management plugin supported by the above, probably [the GitHub Branch Source](https://wiki.jenkins-ci.org/display/JENKINS/GitHub+Branch+Source+Plugin) plugin
 
 ## Installation

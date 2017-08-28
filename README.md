@@ -24,7 +24,7 @@ A Jenkins administrator must install the library as follows:
 3. Specify:
   * Name: `enhanced-flowdock-notifier`
   * Default version: `master`
-4. For retrieval method, select _Modern SCM_ and then _GitLab_:
+4. For retrieval method, select _Modern SCM_ and then _GitHub_:
   * Owner: `eeddir`
   * Repository: ` enhanced-flowdock-pipeline`
 5. Click _Save_ at the bottom.
